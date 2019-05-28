@@ -1,0 +1,8 @@
+# IntelliJ
+.idea
+
+# Docker Homes
+git_home/**
+jenkins_home/**
+nexus_home/**
+sonar_home/**

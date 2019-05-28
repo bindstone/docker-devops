@@ -1,0 +1,46 @@
+version: '3'
+services:
+  # User: root or admin@example.com
+  git:
+    container_name: git
+    image: gitlab/gitlab-ce
+    ports:
+      - "30080:30080"
+      - "8088:8080"
+      - "8087:80"
+    volumes:
+      - "./git_home:/git"
+    networks:
+      - net
+  nexus:
+    container_name: nexus
+    image: sonatype/nexus3
+    ports:
+      - "8081:8081"
+    volumes:
+      - "./nexus_home:/nexus-data"
+    networks:
+      - net
+  jenkins:
+    container_name: jenkins
+    image: jenkins/jenkins
+    ports:
+      - "8080:8080"
+    volumes:
+      - "./jenkins_home:/var/jenkins_home"
+    networks:
+      - net
+  sonar:
+    container_name: sonar
+    image: sonarqube
+    ports:
+      - "9000:9000"
+    networks:
+      - net
+    volumes:
+      - "./sonar_home/conf:/opt/sonarqube/conf"
+      - "./sonar_home/data:/opt/sonarqube/data"
+      - "./sonar_home/logs:/opt/sonarqube/logs"
+      - "./sonar_home/extensions:/opt/sonarqube/extensions"
+networks:
+  net:
