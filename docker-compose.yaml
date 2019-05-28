@@ -5,11 +5,13 @@ services:
     container_name: git
     image: gitlab/gitlab-ce
     ports:
-      - "30080:30080"
-      - "8088:8080"
+      - "22:22"
+      - "443:443"
       - "8087:80"
     volumes:
-      - "./git_home:/git"
+      - "./git_home/config:/etc/gitlab"
+      - "./git_home/logs:/var/log/gitlab"
+      - "./git_home/data:/var/opt/gitlab"
     networks:
       - net
   nexus:

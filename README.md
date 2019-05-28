@@ -6,7 +6,7 @@ The environment itself is build by Docker and defined in the docker-compose.yaml
 
 **Key Elements**
 
-* GitLab
+* GitLab https://docs.gitlab.com/omnibus/docker/
 
 * Nexus
 
@@ -16,10 +16,20 @@ The environment itself is build by Docker and defined in the docker-compose.yaml
 
 Before build the docker-compose, create the following folders in your repository:
 
-* ./git_home
+* ./git_home/config
+
+* ./git_home/logs
+
+* ./git_home/data
 
 * ./jenkins_home
 
 * ./nexus_home
 
-* ./sonar_home
+* ./sonar_home/conf
+
+* ./sonar_home/data
+
+* ./sonar_home/logs
+
+* ./sonar_home/extensions
