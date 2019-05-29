@@ -14,7 +14,7 @@ The environment itself is build by Docker and defined in the docker-compose.yaml
 
 * Sonar
 
-Before build the docker-compose, create the following folders in your repository:
+Before build the docker-compose, validate to have the following folders in your repository:
 
 * ./git_home/config
 

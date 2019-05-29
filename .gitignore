@@ -6,3 +6,23 @@ git_home/**
 jenkins_home/**
 nexus_home/**
 sonar_home/**
+
+# Include empty folder (Hack to have folder structure in GIT)
+!git_home/.keep
+!git_home/config
+!git_home/config/.keep
+!git_home/data
+!git_home/data/.keep
+!git_home/logs
+!git_home/logs/.keep
+!jenkins_home/.keep
+!nexus_home/.keep
+!sonar_home/.keep
+!sonar_home/conf
+!sonar_home/conf/.keep
+!sonar_home/data
+!sonar_home/data/.keep
+!sonar_home/logs
+!sonar_home/logs/.keep
+!sonar_home/extensions
+!sonar_home/extensions/.keep
